@@ -1,0 +1,11 @@
+{
+  "package": "cn.chargeledger.app",
+  "previousVersion": "1.3.1",
+  "previousVersionCode": 6,
+  "version": "1.3.2",
+  "versionCode": 7,
+  "certificateSha256": "2fb3d2665707a4ddb7b7f9c56e1b98d2aa2df40a0bb56956438e3625edd7ade6",
+  "signatureMatchesPrevious": true,
+  "apkSha256": "e35dfa077830dad84c2a90ed4d87b056d2be5afdc1eead6927222b1857efd5dc",
+  "androidDeviceInstallTested": false
+}

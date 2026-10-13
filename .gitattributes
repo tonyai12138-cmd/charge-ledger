@@ -1,0 +1,2 @@
+# Preserve the exact offline asset bytes used in the signed APK and source ZIP.
+* -text

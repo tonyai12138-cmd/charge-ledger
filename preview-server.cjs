@@ -1,0 +1,4 @@
+const http=require('node:http'),fs=require('node:fs'),path=require('node:path');
+const root=path.join(__dirname,'web'),mime={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.woff2':'font/woff2'};
+const port=Number(process.env.PORT||4317);
+http.createServer((req,res)=>{const u=new URL(req.url,'http://localhost');const name=u.pathname==='/'?'index.html':u.pathname.slice(1);if(!/^[a-zA-Z0-9_./-]+$/.test(name)||name.includes('..')){res.writeHead(403);res.end();return;}fs.readFile(path.join(root,name),(err,data)=>{res.writeHead(err?404:200,{'Content-Type':mime[path.extname(name)]||'application/octet-stream','Cache-Control':'no-store'});res.end(err?'Not found':data);});}).listen(port,'127.0.0.1',()=>console.log(`Preview: http://127.0.0.1:${port}/?demo=1`));

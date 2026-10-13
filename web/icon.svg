@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108">
+ <defs>
+  <linearGradient id="energy" gradientUnits="userSpaceOnUse" x1="15" y1="0" x2="85" y2="108"><stop stop-color="#d5f76c"/><stop offset=".48" stop-color="#79e4a4"/><stop offset="1" stop-color="#36cbb6"/></linearGradient>
+  <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="15" y1="0" x2="85" y2="65"><stop stop-color="#fff" stop-opacity=".4"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+ </defs>
+ <path d="M28 1H80A27 27 0 0 1 107 28V80A27 27 0 0 1 80 107H28A27 27 0 0 1 1 80V28A27 27 0 0 1 28 1Z" fill="url(#energy)"/>
+ <path d="M28 3h52a25 25 0 0 1 25 25v13Q57 66 3 48V28A25 25 0 0 1 28 3Z" fill="url(#shine)"/>
+ <path d="M59 23 34 60h20l-3 29 28-40H60l-1-26Z" fill="#20a889" opacity=".35"/>
+ <path d="M57 21 32 58h20l-3 29 28-40H58l-1-26Z" fill="#fffef2" stroke="#2eb398" stroke-opacity=".55" stroke-width="1.5" stroke-linejoin="round"/>
+ <path d="M23 83h14" stroke="#fff9be" stroke-width="4" stroke-linecap="round"/>
+ <path d="M80 19v12M74 25h12" stroke="#fffef2" stroke-width="3" stroke-linecap="round"/>
+</svg>

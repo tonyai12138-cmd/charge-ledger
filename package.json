@@ -1,0 +1,14 @@
+{
+  "name": "charge-ledger",
+  "version": "1.3.2",
+  "private": true,
+  "description": "Local-first Android charging expense ledger",
+  "scripts": {
+    "preview": "node preview-server.cjs",
+    "test": "node --test tests/core.test.cjs tests/legacy.test.cjs tests/tariffs.test.cjs tests/comparison.test.cjs",
+    "test:ui": "node tests/ui.test.cjs && node tests/upgrade-ui.test.cjs && node tests/fluid-ui.test.cjs && node tests/polish-ui.test.cjs && node tests/launch-ui.test.cjs",
+    "test:performance": "node tests/performance.test.cjs"
+  },
+  "engines": { "node": ">=20" },
+  "devDependencies": { "playwright": "1.62.1" }
+}

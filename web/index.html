@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN" class="launch-active">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f9fbff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>充电手账</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="glass.css">
+  <link rel="stylesheet" href="fluid.css">
+  <link rel="stylesheet" href="polish.css">
+  <link rel="stylesheet" href="launch.css">
+  <link rel="preload" href="fonts/ledger-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ledger-sc.woff2" as="font" type="font/woff2" crossorigin>
+  <script defer src="core.js"></script>
+  <script defer src="tariffs.js"></script>
+  <script defer src="interactions.js"></script>
+  <script defer src="launch.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <section id="launch-screen" role="status" aria-label="充电手账启动画面">
+    <div class="launch-wash"></div>
+    <div class="launch-art" aria-hidden="true"><div class="launch-halo"><div class="launch-aperture"></div><svg class="launch-rings" viewBox="0 0 300 300"><circle cx="150" cy="150" r="139"/><circle class="inner-ring" cx="150" cy="150" r="110"/><path d="M19 145h8m246 10h8M145 19v8m10 246v8" stroke="#a1c9b9"/><path d="M52 52q98-63 196 0M52 248q98 63 196 0" stroke="#d0e8de"/></svg><div class="launch-orbit"></div></div><img class="launch-logo" src="icon.svg" alt=""></div>
+    <div class="launch-copy"><div class="launch-wordmark">CHARGE LEDGER</div><h1 class="launch-title">充电手账</h1><p>记下补能，轻盈出发。</p></div>
+    <div class="launch-foot"><div class="launch-energy" aria-hidden="true"><i class="energy-cell"></i><i class="energy-cell"></i><i class="energy-cell"></i></div><span>每次补能，都值得记下。</span></div>
+  </section>
+  <div id="app"></div>
+  <div id="overlay-root"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input id="backup-file" type="file" accept=".json,application/json" hidden>
+</body>
+</html>

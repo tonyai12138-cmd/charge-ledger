@@ -1,0 +1,32 @@
+/* Local licensed variable faces, stable app bars, and compositor-only sheets. */
+@font-face{font-family:Ledger Sans;src:url("fonts/ledger-sc.woff2") format("woff2");font-style:normal;font-weight:100 900;font-display:swap}
+@font-face{font-family:Manrope;src:url("fonts/manrope.woff2") format("woff2");font-style:normal;font-weight:200 800;font-display:swap}
+:root{--body:"Ledger Sans","MiSans","Noto Sans CJK SC",sans-serif;--numeric:"Manrope","Ledger Sans",sans-serif;--safe-top:env(safe-area-inset-top,0px);--safe-right:env(safe-area-inset-right,0px);--safe-bottom:env(safe-area-inset-bottom,0px);--safe-left:env(safe-area-inset-left,0px);--page-pad:22px}
+body{font-weight:420;line-height:1.6}
+h1,.brand{font-weight:700;letter-spacing:-.5px}h2,h3,.sheet-header h2{font-weight:650;letter-spacing:-.25px}
+.hero-amount,.summary-main b,.detail-number{font-family:var(--numeric);font-weight:750;letter-spacing:-1.5px;font-variant-numeric:tabular-nums}
+.stat-value,.record-amount,.metric-trio b,.total-strip b,table{font-family:var(--numeric);font-variant-numeric:tabular-nums}
+.field-label,.nav-button,.tab{font-weight:550}.small,.field-hint,.record-meta{line-height:1.65}
+.page-view{padding:calc(14px + var(--safe-top)) calc(var(--page-pad) + var(--safe-right)) calc(130px + var(--safe-bottom)) calc(var(--page-pad) + var(--safe-left))}
+.page-header{position:sticky;top:calc(-14px - var(--safe-top));z-index:5;min-height:calc(78px + var(--safe-top));padding:calc(14px + var(--safe-top)) calc(var(--page-pad) + var(--safe-right)) 14px calc(var(--page-pad) + var(--safe-left));margin:calc(-14px - var(--safe-top)) calc(-1 * (var(--page-pad) + var(--safe-right))) 20px calc(-1 * (var(--page-pad) + var(--safe-left)));background:linear-gradient(#f9fbff 82%,#f9fbfff7);border-bottom:1px solid #e8eef5;isolation:isolate}
+.page-header h1{font-size:25px}.page-header .small{font-size:12px}.page-header .icon-button{width:46px;height:46px}
+.brand-icon{width:37px;height:37px}.brand{font-size:21px}.greeting h1{font-size:27px;line-height:1.42}
+.nav{bottom:calc(12px + var(--safe-bottom));left:calc(50% + (var(--safe-left) - var(--safe-right))/2);width:min(calc(100% - 28px - var(--safe-left) - var(--safe-right)),624px)}
+.page-add{position:fixed;z-index:28;bottom:calc(105px + var(--safe-bottom));right:max(calc(22px + var(--safe-right)),calc((100vw - 680px)/2 + 22px));width:54px;height:54px}
+.page-add[hidden]{display:none!important}
+#toast{bottom:calc(105px + var(--safe-bottom))}
+.modal-backdrop{background:transparent!important;contain:layout;isolation:isolate}
+.modal-backdrop[hidden]{display:none!important}
+.sheet-scrim{position:absolute;inset:0;background:#48658620;pointer-events:none}
+.sheet{position:relative;z-index:1;max-height:calc(100dvh - var(--safe-top) - 12px);padding-bottom:calc(24px + var(--safe-bottom));will-change:transform,opacity;overflow-anchor:none}
+.sheet-header{position:sticky;top:0;z-index:2;background:#faffff;backdrop-filter:none!important}
+.picker-panel{margin-bottom:calc(12px + var(--safe-bottom));max-height:calc(100% - var(--safe-top) - var(--safe-bottom) - 26px)}
+.comparison-card{padding:20px}.comparison-period{margin-top:5px}.comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;margin-top:18px}
+.comparison-metric{min-width:0;border-left:2px solid #e6edf6;padding-left:12px;display:flex;flex-direction:column;gap:4px}
+.comparison-metric>span{font-size:12px;color:#63758b}.change{font-family:var(--numeric);font-variant-numeric:tabular-nums;font-size:21px;font-weight:700;line-height:1.5}
+.change.up{color:#c34651}.change.down{color:#19815f}.change.flat,.change.unknown{color:#63758b}.change.unknown{font-family:var(--body);font-size:14px;line-height:2.25;font-weight:500}
+.comparison-metric small{font-size:11px;color:#63758b;overflow-wrap:anywhere}.comparison-note{margin-top:18px;padding-top:12px;border-top:1px solid #e8eef5}
+@media(min-width:600px){:root{--page-pad:30px}.greeting h1{font-size:32px}}
+@media(max-width:359px){:root{--page-pad:15px}.page-header h1{font-size:23px}.greeting h1{font-size:24px}.brand{font-size:19px}.status-pill{font-size:11px}.comparison-card{padding:17px}.change{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.sheet{will-change:auto}}
+html[data-motion="reduced"] .sheet{will-change:auto}
