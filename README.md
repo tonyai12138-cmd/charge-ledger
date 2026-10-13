@@ -109,15 +109,6 @@ cd android
 
 详见 [验证记录](deliverables/验证记录.md)、[开屏验证](deliverables/品牌开屏验证.md)、[动效与性能验证](deliverables/动效与性能验证.md)。GitHub Actions 自动执行核心单元测试。
 
-## 贡献者与开发协作
-
-| 贡献者 | 贡献内容 |
-| --- | --- |
-| [tonyai12138-cmd](https://github.com/tonyai12138-cmd) | 项目发起、功能需求、视觉方向、使用反馈与体验验收 |
-| **OpenAI Codex（AI 编程助手）** | 协助 Android 与离线界面开发、历史数据导入、统计与导出、视觉和动效优化、自动化验证、文档整理及 GitHub 发布 |
-
-项目由用户与 OpenAI Codex 持续协作开发。AI 参与情况在此明确署名，提交记录同时保留 `AI-assisted-by: OpenAI Codex` 协作标记。
-
 ## 项目结构
 
 ```text

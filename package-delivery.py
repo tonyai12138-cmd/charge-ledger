@@ -119,7 +119,7 @@ launch_report=[f"# 充电手账 v{new_version} · 品牌开屏验证",'', '验�
  '采样是桌面Chrome数据，不代表小米18 Pro、Android 17、澎湃OS4.0的实际帧率。原生系统到WebView的交接、实际启动耗时及GPU仍需真机验收。','',
  '[Google SplashScreen规范](https://developer.android.com/develop/ui/views/launch/splash-screen)','']
 (out/'品牌开屏验证.md').write_text('\n'.join(launch_report),encoding='utf-8')
-allow_files=['README.md','CHANGELOG.md','.gitignore','.gitattributes','package.json','package-lock.json','build.ps1','tools-bootstrap.py','preview-server.cjs','generate-tariffs.py','tariff-extra.py','tariff-additions.json','source-extract.py','refine-delivery.py','package-delivery.py']
+allow_files=['README.md','CHANGELOG.md','AGENTS.md','.gitignore','.gitattributes','package.json','package-lock.json','build.ps1','tools-bootstrap.py','preview-server.cjs','generate-tariffs.py','tariff-extra.py','tariff-additions.json','source-extract.py','refine-delivery.py','package-delivery.py']
 source=out/'充电手账-源码.zip'
 with zipfile.ZipFile(source,'w',zipfile.ZIP_DEFLATED) as z:
  for name in allow_files:z.write(root/name,name)
